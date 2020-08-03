@@ -1,0 +1,75 @@
+doctype html
+html(lang="pt-br")
+    include templates/head-top.pug
+    title Chat me
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js")
+    
+    style html, body {height: 100%;}  * {margin: 0;padding: 0;box-sizing: border-box;}#chat {height: 70%;display: flex;justify-content: center;align-items: center;flex-direction: column;}input.inp-msg {width: 600px;border: 1px solid #ddd;height: 50px;padding: 0 20px;font-size: 14px;}button.bnt-enviar {width: 600px;height: 50px;font-size: 14px;background: #069;text-align: center;line-height: 50px;font-weight: bold;color: #FFF;margin-top: 10px;}.messages {width: 600px;height: 300px;margin: 20px 0;border: 1px solid #ddd;padding: 20px;}
+
+    body
+
+        div(class="container")
+            include templates/componentes/menu-top.pug
+            form(id="chat")
+                input(class="inp-msg" type="text" tabindex='1' name="username" placeholder="Digite seu nome")
+                //div(class="messages")
+                textarea(class="messages", readonly cols="60", rows="50")
+                input(class="inp-msg" type="text" tabindex='2' name="message" placeholder="Digite sua mensagem")
+                button(type="submit" tabindex='3' class="bnt-enviar") Enviar
+
+        script.
+            // Sempre alterar o host e port quando estiver em desenvolvimento
+            //var socket = io('http://192.168.1.192:80');   // Vai está ouvindo a concexao via socket
+            var socket = io('localhost:8080')
+
+            function renderMessage(message){
+                var d = new Date();
+                const tempo = `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+                var usuario = message.author;
+
+                //$('.messages').append('<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>');
+                //let mensagens = '<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>';
+                var mensagem = `${tempo} - ${usuario.toUpperCase()} - ${message.message}\n`;
+
+                document.querySelector('.messages').value += mensagem;
+            }
+
+            socket.on('previousMessages', function(messages){
+                for(message of messages){
+                    renderMessage(message);
+                }
+            })
+
+            // 'socket.on', escuta as messages enviadas:
+            socket.on('receivedMessage', function(message){
+                renderMessage(message);
+            });
+
+            document.querySelector('#chat').addEventListener('submit', function(e){
+                e.preventDefault();
+
+                var author = document.querySelector('input[name=username]').value;
+                var message = document.querySelector('input[name=message]').value;
+
+                if(author.length && message.length){
+                    var messageObject = {
+                        author: author,
+                        message: message,
+                    };
+
+                    // Passando 'messageObejct' para a function de renderizacao de messages na tela do usuario:
+                    renderMessage(messageObject);
+
+                    // Enviando a mensagem:
+                    socket.emit('sendMessage', messageObject);
+                }
+                
+                document.querySelector("input[name=username]").value = "";
+                document.querySelector("input[name=message]").value = "";
+                
+            })
+        
+    
+        include templates/footer.pug
+        include templates/head-bot.pug

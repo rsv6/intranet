@@ -1,0 +1,128 @@
+[
+    {
+        "colaborador": "Adailson",
+        "ramal": 206,
+        "setor": "Técnico",
+        "email": "adailson@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Alberto",
+        "ramal": 218,
+        "setor": "Financeiro",
+        "email": "alberto@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Alunor",
+        "ramal": 220,
+        "setor": "Alunor",
+        "email": "",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Alysson",
+        "ramal": 204,
+        "setor": "Técnico",
+        "email": "alysson@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Andréia",
+        "ramal": 207,
+        "setor": "Faturamento",
+        "email": "andreia@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Cleber",
+        "ramal": 213,
+        "setor": "Diretoria",
+        "email": "cleber@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Cleidiane",
+        "ramal": 211,
+        "setor": "Almoxarifado",
+        "email": "cleidiane@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Damião",
+        "ramal": 221,
+        "setor": "Vidraçaria",
+        "email": "damiao@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Dora",
+        "ramal": "200/223",
+        "setor": "Recepção",
+        "email": "dora@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Fabiana",
+        "ramal": 210,
+        "setor": "Financeiro",
+        "email": "fabiana@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Kennedy",
+        "ramal": 216,
+        "setor": "Logística",
+        "email": "kennedy@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Ludmila",
+        "ramal": 201,
+        "setor": "Administração",
+        "email": "ludmila@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Mario Jr",
+        "ramal": 205,
+        "setor": "Técnico",
+        "email": "mariojr@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Rafael",
+        "ramal": 214,
+        "setor": "T.I",
+        "email": "rafael@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Rafaela",
+        "ramal": 209,
+        "setor": "Financeiro",
+        "email": "rafaela@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Renato",
+        "ramal": 202,
+        "setor": "Técnico",
+        "email": "renato@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Ricardo",
+        "ramal": 216,
+        "setor": "Téc. em Segurança",
+        "email": "segurancanotrabalho@alunobre.com",
+        "telefone": "---"
+    },
+    {
+        "colaborador": "Rogério",
+        "ramal": 208,
+        "setor": "Técnico",
+        "email": "rogerio@alunobre.com",
+        "telefone": "---"
+    }
+]

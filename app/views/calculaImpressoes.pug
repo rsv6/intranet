@@ -1,0 +1,135 @@
+doctype html
+html(lang="pt-br")
+    include templates/head-top.pug
+    link(src="static/css/impressoes.css")
+    title Calcula Impressões
+    body
+        div(class="container")
+            include templates/componentes/menu-top.pug
+            br
+            h2 Relatório de Impressões
+            br
+            div(class="table-responsive-sm")
+                table(class="table table-bordered table-striped")
+                    thead
+                        tr
+                            th
+                                th A3 Color
+                                th A3 P/B
+                                th A4 Color
+                                th A4 P/B
+                                th Scanner
+                    tbody(id="tabela")
+                        tr(class="valores" id="novo")
+                            td(class="tag") NOVO
+                            td
+                                input(tabindex="1" type="text" class="input" id="a3cn")
+                            td
+                                input(tabindex="3" type="text" class="input" id="a3pn")
+                            td
+                                input(tabindex="5" type="text" class="input" id="a4cn")
+                            td
+                                input(tabindex="7" type="text" class="input" id="a4pn")
+                            td
+                                input(tabindex="9" type="text" class="input" id="dign")
+                        
+                        tr(class="valores" id="antigo")
+                            td(class="tag") ANTIGO
+                            td
+                                input(tabindex="2" type="text" class="input" id="a3ca")
+                            td
+                                input(tabindex="4" type="text" class="input" id="a3pa")
+                            td
+                                input(tabindex="6" type="text" class="input" id="a4ca")
+                            td
+                                input(tabindex="8" type="text" class="input" id="a4pa")
+                            td
+                                input(tabindex="10" type="text" class="input" id="diga")
+
+                        tr(id="total")
+                            td(class="tag") TOTAL
+                            td(id="a3ct")
+                            td(id="a3pt")
+                            td(id="a4ct")
+                            td(id="a4pt")
+                            td(id="digt")
+                        
+                        tr(id="valor-und")
+                            td(class="tag") VLR UND
+                            td(id="vua3c") 1,20
+                            td(id="vua3p") 0,12
+                            td(id="vua4c") 0,60
+                            td(id="vua4p") 0,06
+                            td(id="vudig") 0,03
+                        
+                        tr(id="calculo")
+                            td(class="tag") CÁLCULO
+                            td(id="vta3c")
+                            td(id="vta3p")
+                            td(id="vta4c")
+                            td(id="vta4p")
+                            td(id="vtdig")
+
+                button(id="calcular" class="btn btn-primary") Calcular
+                hr
+                div(class="row")
+                    div(class="col-md-4")
+                        div(class="row")
+                            div(class="col-md-6 table-bordered table-striped")
+                                div VALOR DA FRANQUIA
+                            div(class="col-md-6 table-bordered table-striped resultado d-flex justify-content-center")
+                                div(id="franquia") 500,00
+
+                    div(class="col-md-8 d-flex flex-row-reverse bd-highlight")
+                        div(class="input-group mb-3")
+                            div(class="input-group-prepend")
+                                label(class="input-group-text" for="opcao") Tipo de Folha:
+                            div(class="input-group-text")
+                                select(class="custom-select" id="opcao")
+                                    option(selected) Escolha...
+                                    option(value="1.20") A3 color
+                                    option(value="0.12") A3 P/B
+                                    option(value="0.60") A4 color
+                                    option(value="0.06") A4 P/B
+                                    option(value="0.03") Scanner
+
+                div(class="row")
+                    div(class="col-md-4")
+                        div(class="row" id="div-saldo")
+                            div(class="col-md-6 table table-bordered table-striped")
+                                div SALDO
+                            div(class="col-md-6 table table-bordered table-striped resultado d-flex justify-content-center")
+                                div(id="saldo")
+
+                    div(class="col-md-8 d-flex flex-row-reverse bd-highlight")
+                        div(class="input-group mb-3")
+                            div(class="input-group-prepend")
+                                label(class="input-group-text") Valor restante:
+                            div(class="input-group-text")
+                                input(type="text" id="resto")
+
+                div(class="row")
+                    div(class="col-md-4")
+                        div(class="row")
+                            div(class="col-md-6 table-bordered table-striped")
+                                div VALOR CONSUMIDO
+                            div(class="col-md-6 table-bordered table-striped resultado d-flex justify-content-center")
+                                div(id="valor-consumido")
+
+                    div(class="col-md-8 d-flex flex-row-reverse bd-highlight")
+                        div(class="input-group mb-3")
+                            div(class="input-group-prepend")
+                                label(class="input-group-text") Páginas Liberadas:
+                            div
+                                div(class="input-group-text")
+                                    input(type="text" id="restante" readonly)
+                            div
+                                button(type="button" class="btn btn-primary ml-2" id="btnRestante") Calcular Restante
+
+        
+        include templates/footer.pug
+        include templates/head-bot.pug
+
+        script(src="static/js/calcular-novo.js")
+        script(src="static/js/calcular-restante.js")
+        

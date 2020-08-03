@@ -1,0 +1,15 @@
+doctype html
+html(lang="pt-br")
+    include templates/head-top.pug
+    title Gerenciador de tarefas
+    body
+        div(class="container")
+            include templates/componentes/menu-top.pug
+            div() Usuário: 
+                span
+                    strong= objUser.login
+            center
+                
+                div(class="h1")= dados[0].task
+        include templates/head-bot.pug
+        include templates/footer.pug

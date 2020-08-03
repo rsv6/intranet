@@ -1,0 +1,39 @@
+doctype html
+html(lang="pt-br")
+    include templates/head-top
+    title Contato
+    body
+        div(class="container")
+            include templates/componentes/menu-top.pug
+            br
+            hr
+			   
+            
+            h3
+                bold Ir para o email Alunobre >> 
+                    a(class="btn btn-warning" role="button" href="http://email.uolhost.com.br") Email UOL | ALUNOBRE
+            br
+            hr
+            center
+                h1 Enviar Solicitação:
+            form
+                div(class="form-group")
+                    label(for="nome") Nome:
+                    input(type="text" class="form-control" id="nome" placeholder="Digite seu nome" required)
+                div(class="form-group")
+                    label(for="fone") Telefone: - Ex: (85)34850087
+                    input(type="tel" class="form-control" id="fone" placeholder="(DDD)988776655" pattern="[0-9]{(2)}-[0-9]{9}" required)
+                div( class="form-group")
+                    label(for="email")  Email:
+                    input(type="email" class="form-control" id="email" placeholder="Digite seu email" required)
+                div(class="form-group")
+                    label(for="assunto") Assunto:
+                    input(type="text" class="form-control" id="assunto" placeholder="Informe o assunto" required)
+                div(class="form-group") 
+                    label(for="descricao") Descrição:
+                    textarea(class="form-control", id="descricao", rows="5")
+                button(type="submit" class="btn btn-primary mb-2") Enviar Solicitação
+    
+
+    include templates/footer.pug
+    include templates/head-bot.pug

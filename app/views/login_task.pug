@@ -1,0 +1,41 @@
+doctype html
+html(lang="pt-br")
+    title Login TaskGer
+    include templates/head-top.pug
+    include templates/head-bot.pug
+    
+    //script(scr="https://code.jquery.com/jquery-1.11.2.min.js")
+
+    script.
+        $(window).on('load', function(){
+            //$('#modalTaskGer').modal('show');
+            $('#modalTaskGer').modal({backdrop: false})
+        });
+        
+    body(style="background-color: gray")
+    center
+        br
+        br
+        br
+        //button(type='button' class='btn btn-info' data-toggle='modal' data-target='#modalTaskGer') login
+	
+        div(class='modal fade' id='modalTaskGer')
+            div(class='modal-dialog')
+                div(class='modal-content')
+                    div(class='modal-header')
+                        h4(class='modal-title') Autênticação | TaskGer
+                        //button(type='button' class='close' data-dismiss='modal') X
+                        a(class='btn btn-danger' role='button' href='/') Fechar
+                    div(class='modal-body')
+                        form(method='post')
+                            div(class='form-group')
+                                label(for='login') Login:
+                                input(type='text' class='form-control' name='login' placeholder='Entre com seu login' required)
+                                label(for='senha')
+                                input(type='password' class='form-control' name='senha' placeholder='Entre com sua senha' required)
+                                button(type='reset' class='btn btn-info mr-sm-4') Limpar
+                                button(type='submit' id='btnLogin' class='btn btn-success btn-lg mt-sm-2') Logar
+        
+        script(src="static/js/msgErr.js")
+        //include templates/head-bot.pug
+        

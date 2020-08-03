@@ -1,0 +1,7 @@
+node_modules/
+teste/
+*.odt
+*.pdf
+root.pub
+root
+logs/

@@ -1,0 +1,39 @@
+
+
+#div-saldo{
+    margin-top: 20px;
+}
+
+#saldo{
+    font-weight: 800;
+    font-size: medium;
+}
+
+.resultado{
+    /*border: solid 1px black;*/
+    margin-left: 2px;
+    width: 100px;
+    height: 30px;
+}
+
+#tbl-bottom{
+    display: none;
+}
+
+.esconde{
+    display: none;
+}
+
+.cond-saldo{
+    background-color: crimson;
+    color: black;
+    font-weight: 700;
+    font-size: small;
+}
+
+.cond-saldo-positivo{
+    background-color: green;
+    color: black;
+    font-weight: 700;
+    font-size: small;
+}

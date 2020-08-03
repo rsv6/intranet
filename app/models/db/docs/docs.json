@@ -1,0 +1,79 @@
+[
+  {
+    "servidor": "Vman",
+    "caminho": "192.168.1.1 via web/ssh",
+    "usuario": "admin",
+    "senha": "no7aTXJ3",
+    "atividade": "Gerencia as máquinas virtuais"
+  },
+  {
+    "servidor": "Arquivos",
+    "caminho": "192.168.1.7 via ssh/browser",
+    "usuario": "root",
+    "senha": "ZEc4kh9X",
+    "atividade": "Servidor de arquivos e usuários"
+  },
+  {
+    "servidor": "Faktory",
+    "caminho": "192.168.1.120 via browser",
+    "usuario": "administrador",
+    "senha": "alunobreti",
+    "atividade": "Servidor de NFe Alunobre"
+  },
+  {
+    "servidor": "Faucon",
+    "caminho": "192.168.1.17 via Vman/browser",
+    "usuario": "Administrador",
+    "senha": "alu2512",
+    "atividade": "Servidor NFe Alunor"
+  },
+  {
+    "servidor": "Preference",
+    "caminho": "Via Vman",
+    "usuario": "Administrador",
+    "senha": "Password123",
+    "atividade": "Servidor Preference desenho/calcula de esquadrias"
+  },
+  {
+    "servidor": "Bkpman",
+    "caminho": "192.168.1.10 via ssh/fisica",
+    "usuario": "root",
+    "senha": "yokneHea",
+    "atividade": "Servidor de backup dos arquivos"
+  },
+  {
+    "servidor": "Intranet",
+    "caminho": "192.168.1.192 via ssh",
+    "usuario": "root",
+    "senha": "yokneHea",
+    "atividade": "Servidor de intranet"
+  },
+  {
+    "servidor": "Fortes",
+    "caminho": "192.168.1.13 via vman",
+    "usuario": "Administrador",
+    "senha": "alunobreti",
+    "atividade": "Servidor de aplicação FortesAG"
+  },
+  {
+    "servidor": "FortesDB",
+    "caminho": "192.168.1.16 via ssh/Vman",
+    "usuario": "root",
+    "senha": "ZEc4kh9X",
+    "atividade": "Servidor de banco de dados FortesAG"
+  },
+  {
+    "servidor": "CemServer2",
+    "caminho": "192.168.1.155 ",
+    "usuario": "administrador",
+    "senha": "alunobreti",
+    "atividade": "Servidor de aplicação CemWin"
+  },
+  {
+    "servidor": "CemServerDB",
+    "caminho": "192.168.1.8 via ssh/Vman",
+    "usuario": "root",
+    "senha": "ZEc4kh9X",
+    "atividade": "Servidor de banco de dados CemServer2"
+  }  
+]

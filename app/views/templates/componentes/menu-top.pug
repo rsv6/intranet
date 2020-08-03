@@ -1,0 +1,29 @@
+nav(class="navbar navbar-expand-lg navbar-light bg-light")
+    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")    
+    a(class="navbar-brand" href="/")
+        img(src="static/img/logoAlunobre4.jpg" alt="Alunobre")
+
+    div(class="collapse navbar-collapse" id="navbarTogglerDemo03")
+        ul(class="navbar-nav mr-auto mt-2 mt-lg-0")
+            li(class="nav-item")  
+                a(class="btn btn-outline-success mr-sm-2 mb-sm-2" role="button" href="/") Início
+            li(class="nav-item")  
+                a(class="btn btn-outline-secondary mr-sm-2 mb-sm-2" role="button" href="taskGer") TaskGer
+                //button(type="button" class="btn btn-outline-secondary mr-sm-2 mb-sm-2" data-toggle="modal" data-target="#modalTaskGer") TaskGer
+            li(class="nav-item")  
+                a(class="btn btn-outline-info mr-sm-2 mb-sm-2" role="button" href="ramais") Ramais
+            li(class="nav-item")  
+                a(class="btn btn-outline-danger mr-sm-2 mb-sm-2" role="button" href="calculaImpressoes") Impressões
+            li(class="nav-item")  
+                a(class="btn btn-outline-info mr-sm-2 mb-sm-2" role="button" href="contato") Contato
+            li(class="nav-item")  
+                //button(type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#modalDocs") Docs
+                a(class="btn btn-outline-warning" role="button" href="docs") Docs
+
+        form(class="form-inline my-2 my-lg-0")
+            input(class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Procurar")
+            button(class="btn btn-outline-success my-2 my-sm-0" type="submit") Procurar
+
+//include form-login.pug
+//include form-login-docs.pug

@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    include templates/head-top.pug
+    title Intranet Alunobre
+    body    
+        div(class="container")
+            include templates/componentes/menu-top.pug
+            br
+            hr
+            div(class="text-danger font-weight-bold")= msg
+            div(class="container")
+                div(class="row")
+                    div(class="blocos zoom mb-sm-2 d-flex justify-content-center")
+                        a(type="button" class="img-rsv text-center" href="taskGer")
+                            i(class="fas fa-tasks fa-9x text-secondary")
+
+                    div(class="blocos zoom mb-sm-2 d-flex justify-content-center")
+                        a(type="button" class="img-rsv text-center" href="https://email.uolhost.com.br")
+                            i(class="fas fa-at fa-9x text-primary")
+                        
+                    div(class="blocos zoom mb-sm-2 d-flex justify-content-center")
+                        a(type="button" class="img-rsv text-center" href="ramais")
+                            i(class="fas fa-tty fa-9x text-danger")
+
+                div(class="row")
+                    div(class="blocos zoom mb-sm-2 d-flex justify-content-center")
+                        a(type="button" class="img-rsv text-center" href="calculaImpressoes")
+                            i(class="fas fa-print fa-9x text-warning")
+
+                    div(class="blocos zoom mb-sm-2 d-flex justify-content-center")
+                        a(type="button" class="img-rsv text-center" href="chat")
+                            i(class="fas fa-comments fa-9x text-success")
+
+                    div(class="blocos zoom mb-sm-2 d-flex justify-content-center")
+                        a(type="button" class="img-rsv text-center" href="contato")
+                            i(class="fas fa-envelope fa-9x")
+                   
+                    
+        include templates/head-bot.pug
+        include templates/footer.pug

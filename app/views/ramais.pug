@@ -1,0 +1,36 @@
+doctype html
+html(lang="pt-br")
+    include templates/head-top.pug
+    title Ramais
+    body
+        div(class="container")
+            include templates/componentes/menu-top.pug
+            hr
+            div(class="d-flex justify-content-center")
+                h1 Ramais
+        br
+
+        div(class="container")
+            div(class="table-responsive-sm")        
+                table(class="table table-bordered table-striped table-hover")
+                    thead
+                        tr
+                            th Colaborador
+                            th Ramal
+                            th Setor
+                            th E-mail
+                            th Telefone
+                    tbody
+                        for ramal in ramais
+                            tr
+                                td= ramal.colaborador
+                                td= ramal.ramal
+                                td= ramal.setor
+                                td= ramal.email
+                                td= ramal.telefone
+
+        
+        include templates/head-bot.pug
+        br
+
+        include templates/footer.pug
