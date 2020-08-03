@@ -5,70 +5,108 @@ html(lang="pt-br")
 
     title Docs
     body
-        div(class="container")
-            include templates/componentes/menu-top.pug
-            div() Usuário:
-                span
-                    strong= obj.user
-            div() Acesso: 
-                span
-                    strong= obj.session
-            a(href="sair" type="submit" role="button" class="btn btn-danger") Sair
 
-            div(class="d-flex justify-content-center")
+        div(class="container-fluid")
+            div(class="container")
+                include templates/componentes/menu-top.pug
+
+        div(class="container-fluid" style="background-color: #CFCFCF" )
+            div(class="container")
+                div() Usuário:
+                    span
+                        strong= obj.user
+                div() Acesso: 
+                    span
+                        strong= obj.session
+                a(href="sair" type="submit" role="button" class="btn btn-danger") Sair
             br
-            h3 Formulário de cadastro:        
+        
+        div(class="container-fluid" )
+            div(class="container")
+                h3 Formulário de cadastro:        
+                form(id="formCad")
+                    div(class="form-group")
+                        input(type="text" class="form-control" name="servidor" id="servidor" placeholder="Digite o nome/ip do servidor" required)
+                    
+                    div(class="form-group")
+                        input(type="text" class="form-control" name="caminho" id="caminho" placeholder="Caminho do servidor" required)
+                    
+                    div(class="form-group")
+                        input(type="text" class="form-control" name="usuario" id="usuario" placeholder="Digite o usuário" required)
 
-        div(class="container")
-            form(id="formCad")
-                div(class="form-group")
-                    input(type="text" class="form-control" name="servidor" id="servidor" placeholder="Digite o nome/ip do servidor" required)
-                
-                div(class="form-group")
-                    input(type="text" class="form-control" name="caminho" id="caminho" placeholder="Caminho do servidor" required)
-                
-                div(class="form-group")
-                    input(type="text" class="form-control" name="usuario" id="usuario" placeholder="Digite o usuário" required)
+                    div(class="form-group")
+                        input(type="text" class="form-control" name="senha" id="senha" placeholder="Digite a Senha do usuário" required) 
+                    
+                    div(class="form-group")
+                        textarea(cols="30", rows="3" class="form-control" name="atividade" id="atividade" placeholder="Atividade do serviço" required)
 
-                div(class="form-group")
-                    input(type="text" class="form-control" name="senha" id="senha" placeholder="Digite a Senha do usuário" required) 
-                
-                div(class="form-group")
-                    textarea(cols="30", rows="3" class="form-control" name="atividade" id="atividade" placeholder="Atividade do serviço" required)
+                    div(class="d-flex justify-content-end")
+                        button(type="reset" class="btn btn-info mr-sm-2") Limpar
+                        //button(type="submit" id="salvar" class="btn btn-success btn-lg") Salvar
+                        a(class="btn btn-success mr-sm-2 mb-sm-2" type="submit" id="btnCadDocs" role="button" ) Salvar
 
-                div(class="d-flex justify-content-end")
-                    button(type="reset" class="btn btn-info mr-sm-2") Limpar
-                    //button(type="submit" id="salvar" class="btn btn-success btn-lg") Salvar
-                    a(class="btn btn-success mr-sm-2 mb-sm-2" type="submit" id="btnCadDocs" role="button" ) Salvar
+                br
 
-            br
+                h3 Acesso e atividades T.I Alunobre:
+                hr
+        
+        div(class="container-fluid")
+            div(class="container")
+                div(class="table-responsive-sm")        
+                    table(class="table table-bordered table-striped table-hover")
+                        thead
+                            tr
+                                th Servidor
+                                th Caminho
+                                th Usuário
+                                th Senha
+                                th Atividade
+                        tbody
+                            for dado in dados
+                                tr             
+                                    td
+                                        a(href="#" class="servidor")
+                                            div= dado.servidor
+                                    td
+                                        div= dado.caminho
+                                    td
+                                        div= dado.usuario
+                                    td
+                                        div= dado.senha
+                                    td
+                                        div= dado.atividade
+            
+        br
+        hr
 
-            h3 Acesso e atividades T.I Alunobre:
-            hr
+        div(class="container-fluid" )
+            div(class="container")
+                div(class="row")
+                    div(class="col-sm-6" style="background-color:#E0EEE0")
+                        h2 Calcular impressões
+                        video( width="550" controls)
+                            source(src="static/vid/calcular-impressoes.mp4" type="video/mp4")
+                    
+                    br
+                    div(class="col-sm-6" style="background-color:#E0EEE0")
+                        h2 Deconectar usuário do Cem
+                        video( width="550" controls)
+                            source(src="static/vid/calcular-impressoes.mp4" type="video/mp4")
+        br
+        div(class="container-fluid" )
+            div(class="container")
+                div(class="row")
+                    div(class="col-sm-6" style="background-color:#E0EEE0")
+                        h2 Verificar servidor FortesAG
+                        video( width="550" controls)
+                            source(src="static/vid/calcular-impressoes.mp4" type="video/mp4")
 
-            div(class="table-responsive-sm")        
-                table(class="table table-bordered table-striped table-hover")
-                    thead
-                        tr
-                            th Servidor
-                            th Caminho
-                            th Usuário
-                            th Senha
-                            th Atividade
-                    tbody
-                        for dado in dados
-                            tr             
-                                td
-                                    a(href="#" class="servidor")
-                                        div= dado.servidor
-                                td
-                                    div= dado.caminho
-                                td
-                                    div= dado.usuario
-                                td
-                                    div= dado.senha
-                                td
-                                    div= dado.atividade
+                    br
+                    div(class="col-sm-6" style="background-color:#E0EEE0")
+                        h2 Atualizar servidor FortesAG
+                        video( width="550" controls)
+                            source(src="static/vid/calcular-impressoes.mp4" type="video/mp4")
+
 
         
         include templates/head-bot.pug
